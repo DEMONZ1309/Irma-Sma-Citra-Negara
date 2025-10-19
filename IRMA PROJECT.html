@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikatan Remaja Masjid SMA Citra Negara</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #008000, #FFD700);
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #008000;
+            color: #FFD700;
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #008000;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+        }
+        .profile {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+        .profile img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        input, textarea, select {
+            padding: 10px;
+            border: 1px solid #008000;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: #FFD700;
+            outline: none;
+        }
+        button {
+            padding: 15px;
+            background-color: #008000;
+            color: #FFD700;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #FFD700;
+            color: #008000;
+            transform: scale(1.05);
+        }
+        .message {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #FFD700;
+            color: #008000;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .member-list {
+            list-style: none;
+            padding: 0;
+        }
+        .member-list li {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 5px solid #008000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .member-list li strong {
+            color: #008000;
+        }
+        @media (max-width: 768px) {
+            .profile {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ikatan Remaja Masjid SMA Citra Negara</h1>
+        <p>Menyatukan Remaja untuk Kebaikan dan Ibadah</p>
+    </header>
+    
+    <div class="container">
+        <section class="section" id="profil">
+            <h2>Profil Organisasi</h2>
+            <div class="profile">
+                <div>
+                    <p><strong>Ikatan Remaja Masjid SMA Citra Negara</strong> adalah organisasi yang didirikan untuk mempersatukan remaja siswa SMA Citra Negara dalam kegiatan keagamaan, sosial, dan pendidikan. Kami berkomitmen untuk membangun generasi muda yang taat beribadah, berakhlak mulia, dan berkontribusi positif bagi masyarakat.</p>
+                    <h3>Visi</h3>
+                    <p>Menjadi wadah pengembangan remaja yang pintar public speaking dan berbasis masjid untuk mencapai kehidupan yang lebih baik melalui pendidikan dan ibadah.</p>
+                    <h3>Misi</h3>
+                    <ul>
+                        <li>Menyelenggarakan kegiatan keagamaan seperti kajian, sholat berjamaah, dan pengajian.</li>
+                        <li>Mendorong partisipasi sosial melalui bakti sosial dan kegiatan amal.</li>
+                        <li>Membangun solidaritas antar remaja melalui program-program interaktif.</li>
+                        <li>Menyelenggarakan kegiatan harian seperti muhadarah dan yasinan</li>
+                    </ul>
+                    <h3>Struktur Organisasi</h3>
+                    <p>Ketua: Afif Banu Farras<br>Wakil Ketua: Aulia Miranda<br>Sekretaris: Aisyah Khumaira<br>Bendahara: Farouq<br>Humas: Frdhan ulul Albab</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200/008000/FFD700?text=Logo+IRM" alt="Logo Ikatan Remaja Masjid">
+            </div>
+        </section>
+        
+        <section class="section" id="pendaftaran">
+            <h2>Pendaftaran Anggota</h2>
+            <form id="registrationForm">
+                <input type="text" id="name" placeholder="Nama Lengkap" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Nomor Telepon" required>
+                <select id="class" required>
+                    <option value="">Pilih Kelas</option>
+                    <optgroup label="Kelas 10">
+                        <option value="10 Plus 1">10 Plus 1</option>
+                        <option value="10 Plus 2">10 Plus 2</option>
+                        <option value="10 Plus 3">10 Plus 3</option>
+                        <option value="10 Reguler 1">10 Reguler 1</option>
+                        <option value="10 Reguler 2">10 Reguler 2</option>
+                    </optgroup>
+                    <optgroup label="Kelas 11">
+                        <option value="11 Sosial 1">11 Sosial 1</option>
+                        <option value="11 Sosial 2">11 Sosial 2</option>
+                        <option value="11 Sosial 3">11 Sosial 3</option>
+                        <option value="11 Sosial 4">11 Sosial 4</option>
+                        <option value="11 Sains 1">11 Sains 1</option>
+                        <option value="11 Sains 2">11 Sains 2</option>
+                    </optgroup>
+                    <optgroup label="Kelas 12">
+                        <option value="12 Sosial 1">12 Sosial 1</option>
+                        <option value="12 Sosial 2">12 Sosial 2</option>
+                        <option value="12 Sosial 3">12 Sosial 3</option>
+                        <option value="12 Sosial 4">12 Sosial 4</option>
+                        <option value="12 Sains 1">12 Sains 1</option>
+                        <option value="12 Sains 2">12 Sains 2</option>
+                    </optgroup>
+                </select>
+                <textarea id="reason" placeholder="Alasan Bergabung" rows="4" required></textarea>
+                <button type="submit">Daftar Sekarang</button>
+            </form>
+            <div id="message" class="message">Pendaftaran berhasil! Data Anda telah ditambahkan ke List Anggota.</div>
+        </section>
+        
+        <section class="section" id="list-anggota">
+            <h2>List Anggota</h2>
+            <ul id="memberList" class="member-list">
+                <!-- Anggota akan ditampilkan di sini -->
+            </ul>
+        </section>
+    </div>
+    
+    <script>
+        let members = JSON.parse(localStorage.getItem('members')) || [];
+        
+        function displayMembers() {
+            const memberList = document.getElementById('memberList');
+            memberList.innerHTML = '';
+            members.forEach(member => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <strong>${member.name}</strong><br>
+                    Email: ${member.email}<br>
+                    Telepon: ${member.phone}<br>
+                    Kelas: ${member.class}<br>
+                    Alasan: ${member.reason}
+                `;
+                memberList.appendChild(li);
+            });
+        }
+        
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const classSelect = document.getElementById('class').value;
+            const reason = document.getElementById('reason').value;
+            
+            if (name && email && phone && classSelect && reason) {
+                const newMember = { name, email, phone, class: classSelect, reason };
+                members.push(newMember);
+                localStorage.setItem('members', JSON.stringify(members));
+                displayMembers();
+                document.getElementById('message').style.display = 'block';
+                this.reset();
+                setTimeout(() => {
+                    document.getElementById('message').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Harap isi semua field yang wajib!');
+            }
+        });
+        
+        // Tampilkan anggota saat halaman dimuat
+        displayMembers();
+    </script>
+</body>
+</html>
